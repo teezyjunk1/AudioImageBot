@@ -21,7 +21,7 @@ async def build_video(image_path: Path, audio_path: Path) -> Path:
 
     cmd = (
         f"ffmpeg -y -loop 1 -i {shlex.quote(str(image_path))} -i {shlex.quote(str(audio_path))} "
-        f"-tune stillimage -c:v libx264 -pix_fmt yuv420p -vf {shlex.quote(vf)} "
+        f"-tune stillimage -c:v libx264 -preset ultrafast -pix_fmt yuv420p -vf {shlex.quote(vf)} "
         f"-c:a aac -b:a 192k -shortest {shlex.quote(str(out_path))}"
     )
     proc = await asyncio.create_subprocess_shell(
