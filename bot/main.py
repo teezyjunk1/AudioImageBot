@@ -70,7 +70,8 @@ async def on_lang_choice(cb: CallbackQuery):
     storage.set_lang(uid, lang)
     await cb.answer("OK")
     await cb.message.answer(LANGS[lang].tutorial_after_lang)
-    await cb.message.answer(LANGS[lang].start_ready)
+    # Removed the line below as per instructions
+    # await cb.message.answer(LANGS[lang].start_ready)
     await cb.message.answer(LANGS[lang].help_text)
 
 # Content detection
@@ -156,7 +157,7 @@ async def build_and_send(uid: int, message: Message):
                 if storage.get_lang(uid) == "EN"
                 else ("⚠️ Большой файл: ~" + f"{size_mb:.1f} MB" + ". Пробую отправить…")
             )
-        await message.reply_video(video=FSInputFile(out), caption=l10n.done)
+        await message.reply_document(document=FSInputFile(out), caption=l10n.done)
     except Exception:
         await message.reply(l10n.error_generic)
     finally:

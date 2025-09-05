@@ -28,8 +28,7 @@ RU = L10n(
         "Готов к работе! Отправьте *MP3* аудио и фото (PNG/JPG), в любом порядке. Я соберу MP4 с фото на чёрном фоне."
     ),
     help_text=(
-        "Отправьте аудио *в формате MP3* и фото (PNG/JPG) — можно как фото, так и файл.\n"
-        "Я сделаю видео MP4 1920×1080: картинка по центру, вокруг чёрный фон.\n\n"
+        "Отправьте аудио *в формате MP3* и фото (PNG/JPG).\n\n"
         "Команды:\n"
         "• /start — запуск\n"
         "• /lang — сменить язык"
@@ -44,10 +43,7 @@ RU = L10n(
     done="Готово! Вот ваше видео MP4.",
     error_generic="Упс, что-то пошло не так. Попробуйте ещё раз позже.",
     change_lang_hint="Вы можете сменить язык командой /lang",
-    tutorial_after_lang=(
-        "Язык обновлён. В будущем вы можете изменить язык командой /lang.\n\n"
-        "Отправьте MP3 и PNG/JPG — соберу видео."
-    ),
+    tutorial_after_lang=("Язык обновлён. В будущем вы можете изменить язык командой /lang."),
 )
 
 EN = L10n(
@@ -59,8 +55,7 @@ EN = L10n(
         "Ready! Send *MP3* audio and a PNG/JPG photo, in any order. I will produce an MP4 with your image centered on black."
     ),
     help_text=(
-        "Send audio *in MP3 format* and an image (PNG/JPG) — as photo or file.\n"
-        "I will produce a 1920×1080 MP4: image centered with black background.\n\n"
+        "Send audio *in MP3 format* and an image (PNG/JPG).\n\n"
         "Commands:\n"
         "• /start — start\n"
         "• /lang — change language"
@@ -75,10 +70,7 @@ EN = L10n(
     done="Done! Here is your MP4.",
     error_generic="Oops, something went wrong. Please try again later.",
     change_lang_hint="You can change language with /lang",
-    tutorial_after_lang=(
-        "Language updated. In the future you can change it with /lang.\n\n"
-        "Send MP3 and PNG/JPG — I will build the video."
-    ),
+    tutorial_after_lang=("Language updated. In the future you can change it with /lang."),
 )
 
 LANGS: Dict[str, L10n] = {"RU": RU, "EN": EN}
